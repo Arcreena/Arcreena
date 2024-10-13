@@ -1,0 +1,49 @@
+""""
+Workflow of project:
+1- Input from user(Rock,paper,Scissor)
+2- Computer choice (Computer will choose randomly not conditionally)
+3- Result print
+Cases:
+A-Rock
+Rock-Rock=tie
+Rock-paper=paper win
+Rock-Scissor=Rock win
+
+B-Paper
+paper-paper=tie
+paper-rock=paper win
+paper-scissor=scissor win
+
+c-Scissor
+Scissor-Scissor=tie
+Scissor-rock=rock win
+scissor-paper=Scissor win"""
+
+import random
+item_list=["Rock","Scissor","paper"]
+
+user_choice=input("Enter your move=Rock,Paper,Scissor= ")
+Comp_choice=random.choice(item_list)
+
+print(f"user choice={user_choice}, Computer choice={Comp_choice}")
+
+if user_choice==Comp_choice:
+    print("Both choose same:=Match Tie")
+
+elif user_choice=="Rock":
+  if comp_choice=="paper":
+    print("Paper covers rock= Computer win")
+  else:
+    print("Rock smashes scissor= you win")
+
+elif user_choice=="paper":
+  if Comp_choice=="Scissor":
+      print("Scissor cuts paper, Computer win")
+  else:
+      print("Paper covers Rocks,you win")
+
+elif user_choice=="Scissor":
+  if Comp_choice=="paper":
+      print("Scissor cuts paper, you win")
+  else:
+    print("Rock smashes Scissor,Computer win")
